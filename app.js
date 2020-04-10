@@ -33,3 +33,91 @@ const render = require("./lib/htmlRenderer");
 // for further information. Be sure to test out each class and verify it generates an 
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work!```
+
+
+const questionManager = [
+    {
+        type:"input",
+        name:"name",
+        message:"What is your manager's name?"
+    },
+    {
+        type:"input",
+        name:"id",
+        message:"What is your manager's id?"
+    },
+    {
+        type:"input",
+        name:"email",
+        message:"What is your manager's email?"
+    },
+    {
+        type:"input",
+        name:"officenumber",
+        message:"What is your manager's office number?"
+    },
+    {
+        type:"list",
+        name:"teammember",
+        message:"Which type of team member would you like to add?",
+        choices:["Engineer", "Intern", "I don't want to add anymore team members."]
+    },
+];
+
+const questionEngineer = [
+    {
+        type:"input",
+        name:"name",
+        message:"What is your engineer's name?"
+    },
+    {
+        type:"input",
+        name:"id",
+        message:"What is your engineer's id?"
+    },
+    {
+        type:"input",
+        name:"email",
+        message:"What is your engineers's email?"
+    },
+    {
+        type:"input",
+        name:"github",
+        message:"What is your engineer's GitHub username?"
+    },
+    {
+        type:"list",
+        name:"teammember",
+        message:"Which type of team member would you like to add?",
+        choices:["Engineer", "Intern", "I don't want to add anymore team members."]
+    },
+];
+
+const questionIntern = [
+    {
+        type:"input",
+        name:"name",
+        message:"What is your intern's name?"
+    },
+    {
+        type:"input",
+        name:"id",
+        message:"What is your intern's id?"
+    },
+    {
+        type:"input",
+        name:"email",
+        message:"What is your intern's email?"
+    },
+    {
+        type:"input",
+        name:"github",
+        message:"What is your intern's GitHub username?"
+    },
+    {
+        type:"list",
+        name:"teammember",
+        message:"Which type of team member would you like to add?",
+        choices:["Engineer", "Intern", "I don't want to add anymore team members."]
+    },
+];
