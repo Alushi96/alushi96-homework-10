@@ -111,8 +111,8 @@ const questionIntern = [
     },
     {
         type:"input",
-        name:"github",
-        message:"What is your intern's GitHub username?"
+        name:"school",
+        message:"What school does your intern attend?"
     },
     {
         type:"list",
@@ -126,6 +126,8 @@ function init() {
   promptmanager();
 }
 
+const managerData = [];
+
 function promptmanager() {
     inquirer.prompt(questionManager)
         .then(function(data) {
@@ -135,8 +137,11 @@ function promptmanager() {
             else if (data.teammember === "Intern") {
                 promptintern();
             }
+            managerData.push(data);
         });
 }
+
+const engineerData = [];
 
 function promptengineer() {
     inquirer.prompt(questionEngineer)
@@ -147,8 +152,11 @@ function promptengineer() {
             else if (data.teammember === "Intern") {
                 promptintern();
             }
+            engineerData.push(data);
         });
 }
+
+const internData = [];
 
 function promptintern() {
     inquirer.prompt(questionIntern)
@@ -159,7 +167,14 @@ function promptintern() {
             else if (data.teammember === "Intern") {
                 promptintern();
             }
+            internData.push(data);
         });
 }
 
 init();
+
+module.exports = {
+    managerData,
+    engineerData,
+    internData
+}
