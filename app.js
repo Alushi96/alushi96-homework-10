@@ -105,7 +105,7 @@ function init() {
   promptmanager();
 }
 
-function test() {
+function renderHTML() {
     render(employees);
     fs.writeFile(outputPath, render(employees), function(err) {
         if (err) {
@@ -130,7 +130,7 @@ function promptmanager() {
                 promptintern();
             }
             else {
-            test();
+            renderHTML();
             }
         });
 }
@@ -149,7 +149,7 @@ function promptengineer() {
                 promptintern();
             }
             else {
-            test();
+            renderHTML();
             }
         });
 }
@@ -168,7 +168,7 @@ function promptintern() {
                 promptintern();
             }
             else {
-            test();
+            renderHTML();
             }
         });
 }
